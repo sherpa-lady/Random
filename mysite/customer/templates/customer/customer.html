@@ -1,0 +1,24 @@
+
+
+{% block content %}
+<h1>The customer detail</h1>
+<table>
+	<tr>
+		<th>name</th>	
+		<th>phone</th>	
+		<th>email</th>
+		<th>time</th>
+	</tr>
+	{% for j in customer_list %}
+	<tr>
+		<td> {{ j.name }} </td>
+		<td> {{ j.phone }} </td>
+		<td> {{ j.email }} </td>
+		<td> {{ j.time }} </td>
+
+	</tr>
+	{% endfor %}
+</table>
+	
+
+{% endblock %}

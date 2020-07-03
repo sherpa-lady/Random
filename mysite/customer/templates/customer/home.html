@@ -1,0 +1,52 @@
+{% load static %}
+
+{% block content %}
+
+
+<h1>this is file</h1>
+
+{{file}}
+
+
+<h1>this is data </h1>
+<table>
+	<legend>customer detail</legend>
+	<tr>
+		<th>name</th>
+		<th>phone</th>
+		<th>email</th>	
+	</tr>
+	{% for i in customer %}
+	<tr>
+		<td> {{ i.name }} </td>
+		<td> {{ i.phone }} </td>
+		<td> {{ i.email }} </td>
+
+	</tr>
+	{% endfor %}
+</table>
+	
+<table>
+	<legend>order detail</legend>
+	<tr>
+		<th>customer</th>
+		<th>product</th>
+		<th>date</th>	
+		<th>status</th>	
+
+	</tr>
+	{% for i in order %}
+	<tr>
+		<td> {{ i.customer }} </td>
+		<td> {{ i.product }} </td>
+		<td> {{ i.date_created }} </td>
+		<td> {{ i.status }} </td>
+
+
+	</tr>
+	{% endfor %}
+</table>
+
+
+
+{% endblock %}
